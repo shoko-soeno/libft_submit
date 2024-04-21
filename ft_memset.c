@@ -6,7 +6,7 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 21:15:01 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/19 23:12:39 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/04/21 14:21:34 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,15 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
+
+// int main(void)
+// {
+// 	char buffer[10];
+// 	memset(buffer, 'x', 10);
+// 	ft_memset(buffer, 'x', 10);
+// 	for (int i = 0; i < 10; i++)
+// 	{
+// 		printf("%c", buffer[i]);
+// 	}
+// 	printf("\n");
+// }

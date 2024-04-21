@@ -6,7 +6,7 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 00:28:49 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/19 22:24:41 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/04/21 17:55:36 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	if (dst == NULL || src == NULL)
 		return (src_len);
 	dest_len = ft_strlen(dst);
-	if (dstsize == 0)
-		return (src_len);
-	i = 0;
-	if (dstsize <= dest_len)
-	{
+	if (dstsize <= dest_len || dstsize == 0)
 		return (dstsize + src_len);
-	}
+	i = 0;
 	while (src[i] != '\0' && dest_len + i < dstsize - 1)
 	{
 		dst[dest_len + i] = src[i];
