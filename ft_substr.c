@@ -6,7 +6,7 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 22:53:02 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/19 22:53:04 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/04/22 20:12:35 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,3 +32,21 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(new, s + start, finish + 1);
 	return (new);
 }
+
+// int main() {
+// 	const char *text = "Hello, World!";
+// 	char *substring;
+// 	// test1
+// 	substring = ft_substr(text, 7, 5);
+// 	printf("normal case: '%s'\n", substring);
+// 	free(substring);
+// 	// test2 `start` is longer than s
+// 	substring = ft_substr(text, 20, 5);
+// 	printf("`start` is longer than s: '%s'\n", substring);
+// 	free(substring);
+// 	// test3 len is longer than needed
+// 	substring = ft_substr(text, 0, 50);
+// 	printf("`len` is longer than needed: '%s'\n", substring);
+// 	free(substring);
+// 	return 0;
+// }

@@ -6,14 +6,13 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 22:02:50 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/19 22:02:53 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/04/22 18:47:48 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned
-int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;
 	unsigned int	length;
@@ -34,3 +33,17 @@ int, char))
 	res[i] = '\0';
 	return (res);
 }
+
+// char toupper_adapter(unsigned int index, char c) {
+// 	(void)index;
+// 	return (char)ft_toupper((int)c);
+// }
+// int main() {
+// 	const char *input = "hello world";
+// 	char *result;
+// 	result = ft_strmapi(input, toupper_adapter);
+// 	printf("Original: %s\n", input);
+// 	printf("Uppercase: %s\n", result);
+// 	free(result);
+// 	return 0;
+// }

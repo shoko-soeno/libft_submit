@@ -6,7 +6,7 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 10:34:45 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/21 10:34:47 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/04/22 17:32:50 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,19 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		*lst = node;
 	}
 }
+
+// void del(void *content) {
+// 	free(content);
+// }
+// int main() {
+// 	t_list *head = malloc(sizeof(t_list));
+// 	int *content = malloc(sizeof(int));
+// 	*content = 42;
+// 	head->content = content;
+// 	head->next = NULL;
+// 	ft_lstclear(&head, del);
+// 	if (head == NULL) {
+// 		printf("List is cleared.\n");
+// 	}
+// 	return 0;
+// }

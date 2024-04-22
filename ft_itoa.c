@@ -6,7 +6,7 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 21:57:58 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/19 21:57:59 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/04/22 16:57:30 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static char	*ft_char(char *s, unsigned int number, long int len)
 	return (s);
 }
 
-static long int	ft_len(int n)
+static long int	ft_int_len(int n)
 {
 	int	len;
 
@@ -40,26 +40,38 @@ static long int	ft_len(int n)
 char	*ft_itoa(int n)
 {
 	char				*s;
-	long int			len;
+	long int			int_len;
 	unsigned int		number;
 	int					sign;
 
 	sign = 1;
-	len = ft_len(n);
-	s = (char *)malloc(sizeof(char) * (len + 1));
+	int_len = ft_int_len(n);
+	s = (char *)malloc(sizeof(char) * (int_len + 1));
 	if (!(s))
 		return (NULL);
-	s[len--] = '\0';
+	s[int_len--] = '\0';
 	if (n == 0)
 		s[0] = '0';
 	if (n < 0)
 	{
-		sign *= -1;
+		sign = -1;
 		number = n * -1;
 		s[0] = '-';
 	}
 	else
 		number = n;
-	s = ft_char(s, number, len);
+	s = ft_char(s, number, int_len);
 	return (s);
 }
+
+// int main()
+// {
+// 	int test_values[] = {1234, -1234, 0, 2147483647, -2147483648};
+// 	char *result;
+// 	for (int i = 0; i < sizeof(test_values) / sizeof(test_values[0]); i++) {
+// 		result = ft_itoa(test_values[i]);
+// 		printf("ft_itoa(%d) = %s\n", test_values[i], result);
+// 		free(result);  // Remember to free the allocated memory
+// 	}
+// 	return 0;
+// }

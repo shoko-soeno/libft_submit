@@ -6,7 +6,7 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 00:28:49 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/21 17:55:36 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/04/22 18:34:21 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,3 +34,13 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		dst[dest_len + i] = '\0';
 	return (dest_len + src_len);
 }
+
+// int main() {
+// 	char dst[10] = "Hello";
+// 	const char *src = " World!";
+// 	size_t result;
+// 	result = ft_strlcat(dst, src, sizeof(dst));
+// 	printf("Return value: %zu\n", result);
+// 	printf("Result = %s\n", &*dst);
+// 	return 0;
+// }

@@ -6,7 +6,7 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 22:27:51 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/19 22:27:53 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/04/22 20:13:36 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,3 +54,19 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(new, (char *)s1, size + 1);
 	return (new);
 }
+
+// int main() {
+// 	char const *s1 = "---Hello-World---";
+// 	char const *set = "-";
+// 	char *trimmed;
+
+// 	trimmed = ft_strtrim(s1, set);
+// 	if (trimmed != NULL) {
+// 		printf("Original: '%s'\n", s1);
+// 		printf("Trimmed: '%s'\n", trimmed);
+// 		free(trimmed);
+// 	} else {
+// 		printf("Failed to allocate memory for trimmed string.\n");
+// 	}
+// 	return 0;
+// }

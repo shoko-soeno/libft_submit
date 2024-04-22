@@ -6,7 +6,7 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 20:22:25 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/19 21:48:13 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/04/22 20:13:14 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,3 +32,13 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	}
 	return (i);
 }
+
+// int main() {
+// 	char dst[5] = "Hello";
+// 	const char *src = " World!";
+// 	size_t result;
+// 	result = ft_strlcpy(dst, src, sizeof(dst));
+// 	printf("Return value: %zu\n", result);
+// 	printf("Result = %s\n", &*dst);
+// 	return 0;
+// }
