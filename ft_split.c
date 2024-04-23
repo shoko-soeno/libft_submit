@@ -6,7 +6,7 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 20:00:51 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/19 23:06:23 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/04/23 23:23:16 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,4 +99,25 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	result = split_words(s, c, result, cnt_words);
 	return (result);
+}
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	char	*new;
+	size_t	slen;
+	size_t	finish;
+
+	if (!s)
+		return (0);
+	slen = ft_strlen(s);
+	finish = 0;
+	if (start < slen)
+		finish = slen - start;
+	if (finish > len)
+		finish = len;
+	new = (char *)malloc(sizeof(char) * (finish + 1));
+	if (!new)
+		return (0);
+	ft_strlcpy(new, s + start, finish + 1);
+	return (new);
 }

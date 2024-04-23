@@ -6,7 +6,7 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 20:07:00 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/21 17:26:46 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/04/23 23:23:43 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,3 +60,4 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 // }
 // overlapexample
 // pexamplexample
+// if (!dst && !src) この部分はif (!dst || !src)が良いかもしれない？返り値を確認。 

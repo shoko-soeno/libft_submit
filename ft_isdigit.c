@@ -6,17 +6,11 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 16:23:17 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/19 22:55:58 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/04/23 20:18:24 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 int	ft_isdigit(int c)
 {
-	if (c >= 48 && c <= 57)
-	{
-		return (1);
-	}
-	return (0);
+	return (c >= '0' && c <= '9');
 }
