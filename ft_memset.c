@@ -6,7 +6,7 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 21:15:01 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/23 23:23:41 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/04/24 20:54:48 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,14 @@
 void	*ft_memset(void *b, int c, size_t len)
 {
 	unsigned char	*ptr;
-	unsigned char	d;
-	
-	d = (unsigned char)c;
+
+	if (b == NULL)
+		return (NULL);
+	if (len == 0)
+		return (b);
 	ptr = (unsigned char *)b;
 	while (len-- > 0)
-		*ptr++ = d;
+		*ptr++ = (unsigned char)c;
 	return (b);
 }
 
@@ -28,14 +30,14 @@ void	*ft_memset(void *b, int c, size_t len)
 // #include <string.h>
 // int main(void)
 // {
-// 	// char buffer[10];
-// 	void *p1 = memset(NULL, 'x', 10);
-// 	void *p2 = ft_memset(NULL, 'x', 10);
-// 	printf("p1: %p\np2: %p\n", p1, p2);
+// 	char buffer[10];
+// 	// void *p1 = memset(buffer, 'x', NULL);
+// 	// printf("p1: %p\n", p1);
+// 	void *p2 = ft_memset(buffer, 'x', 0);
+// 	printf("p2: %p\n", p2);
 // 	// for (int i = 0; i < 10; i++)
 // 	// {
 // 	// 	printf("%c", buffer[i]);
 // 	// }
 // 	// printf("\n");
 // }
-// bがNULLの時にエラーが起きている？仕様的にはNULLガードは要らないかもしれないが。

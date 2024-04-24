@@ -6,7 +6,7 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 22:53:02 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/24 11:06:16 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/04/24 11:22:52 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,36 +32,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(new, s + start, finish + 1);
 	return (new);
 }
-
-// static char	**split_words(char const *s, char c, char **result, int cnt_words)
-// {
-// 	int	i;
-// 	int	j;
-// 	int	word_len;
-
-// 	i = 0;
-// 	j = 0;
-// 	word_len = 0;
-// 	while (j < cnt_words)
-// 	{
-// 		while (s[i] && s[i] == c)
-// 			i++;
-// 		while (s[i] && s[i] != c)
-// 		{
-// 			i++;
-// 			word_len++;
-// 		}
-// 		result[j] = (char *)malloc(sizeof(char) * (word_len + 1));
-// 		if (!result[j])
-// 			return (free_array(result, j));
-// 		ft_putword(result[j], s, i, word_len);
-// 		word_len = 0;
-// 		j++;
-// 	}
-// 	result[j] = 0;
-// 	return (result);
-// }
-
 
 // int main() {
 // 	const char *text = "Hello, World!";

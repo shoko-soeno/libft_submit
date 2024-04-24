@@ -6,7 +6,7 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 23:01:07 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/23 23:11:09 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/04/24 11:54:33 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,10 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd(nb + '0', fd);
 }
 
-//INT_MINがオーバーフローしないか確かめる。
+// void	ft_putchar_fd(char c, int fd)
+// {
+// 	write(fd, &c, 1);
+// }
+// int main(){
+// 	ft_putnbr_fd(-2147483648, 1);
+// }
