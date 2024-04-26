@@ -6,7 +6,7 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 21:59:05 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/19 21:59:47 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/04/26 17:58:28 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	int	i;
 
-	if (!s)
+	if (!s || !f)
 		return ;
 	i = 0;
 	while (s[i] != '\0')

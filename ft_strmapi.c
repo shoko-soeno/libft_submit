@@ -6,7 +6,7 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 22:02:50 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/22 18:47:48 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/04/26 18:44:16 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (!s)
 		return (NULL);
 	length = ft_strlen(s);
-	res = malloc(length * sizeof(char) + 1);
+	res = malloc(sizeof(char) * length + 1);
 	if (!res)
 		return (NULL);
 	i = 0;

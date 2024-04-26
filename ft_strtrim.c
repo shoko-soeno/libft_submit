@@ -6,7 +6,7 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 22:27:51 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/23 20:40:03 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/04/26 19:11:53 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size = ft_strlen(s1);
 	while (size != 0 && is_set(s1[size - 1], set))
 		size--;
-	new = (char *)malloc(size * sizeof(char) + 1);
+	new = ft_substr(s1, 0, size);
 	if (!new)
 		return (NULL);
-	ft_strlcpy(new, (char *)s1, size + 1);
 	return (new);
 }
 

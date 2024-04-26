@@ -6,20 +6,33 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 20:00:51 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/24 19:18:51 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/04/26 19:47:43 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	count_words(char const *str, char c)
+static char	*free_array(char **arr, size_t i)
+{
+	while (i > 0)
+	{
+		i--;
+		free(arr[i]);
+	}
+	free(arr);
+	return (NULL);
+}
+
+static int	count_words(char const *str, char c)
 {
 	size_t	i;
-	size_t	cnt;
+	int		cnt;
 
 	i = 0;
 	cnt = 0;
-	while (str[i] != '\0')
+	if (!str || !c)
+		return (-1);
+	while (str[i])
 	{
 		while (str[i] && str[i] == c)
 			i++;
@@ -31,49 +44,63 @@ size_t	count_words(char const *str, char c)
 	return (cnt);
 }
 
-static void	*free_array(char **arr)
+static char	*ft_strndup(const char *src, size_t n)
 {
-	char **p = arr;
-	while (*p)
+	size_t	i;
+	char	*dup;
+
+	if (!src)
+		return (NULL);
+	dup = (char *)malloc((n + 1) * sizeof(char));
+	if (!dup)
+		return (NULL);
+	i = 0;
+	while (i < n && src[i])
 	{
-			free(*p);
-			p++;
+		dup[i] = src[i];
+		i++;
 	}
-	free(arr);
-	return (NULL);
+	dup[i] = '\0';
+	return (dup);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**result;
-	size_t	i;
-	size_t	j;
-	size_t	start;
+	char		**result;
+	size_t		i;
+	const char	*start;
 
-	if (!s)
-		return (NULL);
-	result = (char **)malloc(sizeof(char *) * (count_words(s, c)+1));
+	result = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (!result)
 		return (NULL);
 	i = 0;
-	j = 0;
-	while (s[i])
+	while (*s)
 	{
-		while (s[i] == c && s[i] != '\0')
-			i++;
-		start = i;
-		while (s[i] != c && s[i] != '\0')
-			i++;
-		if (i > start)
-		{
-			result[j] = ft_substr(&s[start], 0, i - start);
-			if (!result[j])
-				return (free_array(result));
-			j++;
-		}
+		while (*s == c)
+			s++;
+		if (!*s)
+			break ;
+		start = s;
+		while (*s != c && *s)
+			s++;
+		result[i] = ft_strndup(start, s - start);
+		if (!result[i])
+			return (free_array(result, i), NULL);
+		i++;
 	}
-	result[j] = NULL;
+	result[i] = NULL;
 	return (result);
 }
 
-//strdupとstrcharを合わせた関数を作って、文字列と文字を受け取って、sのなかでcがあるところまでを切り出す関数を作った
+// int main (){
+// 	char *s = ",,,hello,,,world,,,42,,,tokyo,,,,";
+// 	char **result = ft_split(s, ',');
+// 	char **temp = result;
+// 	while (*temp)
+// 	{
+// 		printf("%s\n", *temp);
+// 		temp++;
+// 	}
+// 	free(result);
+// }
+//malloc(0) returns NULL. if s is NULL, count_words(s,c) returns -1.
