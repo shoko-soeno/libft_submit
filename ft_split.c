@@ -6,7 +6,7 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 20:00:51 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/27 03:26:57 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/04/27 14:25:05 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,9 +86,8 @@ char	**ft_split(char const *s, char c)
 		while (*s != c && *s)
 			s++;
 		result[i] = ft_strndup(start, s - start);
-		if (!result[i])
-			return (free_array(result, i), NULL);
-		i++;
+		if (!result[i++])
+			return (free_array(result, i-1), NULL);
 	}
 	result[i] = NULL;
 	return (result);

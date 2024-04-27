@@ -6,7 +6,7 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 00:28:49 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/27 07:30:35 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/04/27 15:05:32 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,32 +15,25 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t	dest_len;
-	size_t	src_len;
+	size_t	dst_len;
 	size_t	i;
 
-	src_len = ft_strlen(src);
-	if (dst == NULL || src == NULL)
-		return (src_len);
-	dest_len = ft_strlen(dst);
-	if (dstsize <= dest_len || dstsize == 0)
-		return (dstsize + src_len);
+	dst_len = 0;
+	if (dst)
+		dst_len = ft_strlen(dst);
+	if (dstsize <= dst_len || dstsize == 0)
+		return (dstsize + strlen(src));
 	i = 0;
-	while (src[i] != '\0' && dest_len + i < dstsize - 1)
+	while (src[i] != '\0' && dst_len + i < dstsize - 1)
 	{
-		dst[dest_len + i] = src[i];
+		dst[dst_len + i] = src[i];
 		i++;
 	}
-	if (dest_len < dstsize)
-		dst[dest_len + i] = '\0';
-	return (dest_len + src_len);
+	if (dst_len < dstsize)
+		dst[dst_len + i] = '\0';
+	return (dst_len + strlen(src));
 }
 
-dest_len = 0
-if (dst)
-	dst_len = ft_strlen(dst);
-return は2つに減らせるはず。
-if (dstsize <= dest_len || dstsize == 0)で0はチェックできるからNULL不要？
 // ASSERT_EQ_I(ft_strlcat(NULL, src1, 0), strlcat(NULL, src2, 0));
 // int main() {
 // 	char dst[10] = "Hello";

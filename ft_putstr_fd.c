@@ -6,7 +6,7 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 22:25:49 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/23 19:30:16 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/04/27 15:09:27 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	ft_putstr_fd(char *s, int fd)
 	i = 0;
 	if (!s)
 		return ;
-	while (s[i])
-		ft_putchar_fd(s[i++], fd);
+	while (s[i]);
+		i++;
+	write(1, s[i], (unsigned long)strlen(s));
 }
