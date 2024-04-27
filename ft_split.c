@@ -6,7 +6,7 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 20:00:51 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/26 19:47:43 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/04/27 03:26:57 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,8 @@ char	**ft_split(char const *s, char c)
 	size_t		i;
 	const char	*start;
 
+	if (!s)
+		return (NULL);
 	result = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (!result)
 		return (NULL);
@@ -78,7 +80,7 @@ char	**ft_split(char const *s, char c)
 	{
 		while (*s == c)
 			s++;
-		if (!*s)
+		if (!*s) 
 			break ;
 		start = s;
 		while (*s != c && *s)

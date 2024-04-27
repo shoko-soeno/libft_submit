@@ -6,7 +6,7 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 21:15:01 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/24 20:54:48 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/04/27 07:18:36 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ void	*ft_memset(void *b, int c, size_t len)
 {
 	unsigned char	*ptr;
 
-	if (b == NULL)
-		return (NULL);
-	if (len == 0)
-		return (b);
+	// if (b == NULL)
+	// 	return (NULL);
+	// if (len == 0)
+	// 	return (b);
 	ptr = (unsigned char *)b;
 	while (len-- > 0)
 		*ptr++ = (unsigned char)c;

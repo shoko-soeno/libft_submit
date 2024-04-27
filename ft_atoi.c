@@ -6,7 +6,7 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 17:25:49 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/22 16:40:52 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/04/27 03:56:37 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	handle_overflow(const char *str, int sign)
 	unsigned long	ret;
 
 	ret = 0;
-	while (*str >= '0' && *str <= '9')
+	while (ft_isdigit(*str))
 	{
 		ret *= 10;
 		if (sign == 1 && ret > (unsigned long)LONG_MAX - (*str - '0'))

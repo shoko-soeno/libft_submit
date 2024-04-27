@@ -6,7 +6,7 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 20:07:00 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/26 18:36:14 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/04/27 07:19:18 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,19 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t			i;
 	unsigned char	*d;
 	unsigned char	*s;
 
-	i = 0;
 	d = (unsigned char *)dst;
 	s = (unsigned char *)src;
 	if (!dst || !src)
 		return (dst);
 	if (dst < src)
 		return (ft_memcpy(dst, src, len));
-	i = len;
-	while (i > 0)
+	while (len > 0)
 	{
-		d[i - 1] = s[i - 1];
-		i--;
+		d[len - 1] = s[len - 1];
+		len--;
 	}
 	return (dst);
 }

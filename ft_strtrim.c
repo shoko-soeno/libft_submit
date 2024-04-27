@@ -6,7 +6,7 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 22:27:51 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/26 19:11:53 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/04/27 07:09:09 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,8 @@
 
 static int	is_set(char const c, char const *set)
 {
-	int	i;
-
-	i = 0;
-	while (set[i] != '\0')
-	{
-		if (set[i] == c)
-			return (1);
-		i++;
-	}
+	if (ft_strchr(set, c))
+		return (1);
 	return (0);
 }
 

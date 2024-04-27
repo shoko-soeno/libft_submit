@@ -6,7 +6,7 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 23:01:07 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/24 11:54:33 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/04/27 06:40:00 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	long	nb;
 
-	nb = n;
+	nb = (long)n;
 	if (nb < 0)
 	{
 		write(fd, "-", 1);
