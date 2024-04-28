@@ -6,7 +6,7 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 17:25:49 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/28 14:04:42 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/04/28 19:00:31 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,13 @@ static long	handle_overflow(const char *str, int sign)
 			return (LONG_MAX);
 		if (sign == -1 && ret > ((cutoff + 1 - digit) / 10))
 			return (LONG_MIN);
-		ret = ret*10 + digit;
+		ret = ret * 10 + digit;
 		str++;
 	}
 	return (ret);
 }
 
-static int is_space(const char c)
+static int	is_space(const char c)
 {
 	return ((c >= 9 && c <= 13) || c == 32);
 }
@@ -65,6 +65,5 @@ int	ft_atoi(const char *str)
 // 	printf("%d\n", ft);
 // }
 // // int original = atoi("18446744073709551620");
-// // 	int ft = ft_atoi("18446744073709551620");
-// /* 27. LONG_MAX + 1 */ ASSERT_EQ_I(atoi("9223372036854775808"), ft_atoi("9223372036854775808"));
-// 	/* 28. LONG_MIN - 1 */ ASSERT_EQ_I(atoi("-9223372036854775809"), ft_atoi("-9223372036854775809"));
+// // int ft = ft_atoi("18446744073709551620");
+// ft_atoi("9223372036854775808"));

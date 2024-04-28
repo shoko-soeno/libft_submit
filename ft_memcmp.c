@@ -6,7 +6,7 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 22:53:20 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/27 15:07:52 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/04/28 18:56:49 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,4 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		n--;
 	}
 	return ((int)(*p1 - *p2));
-	// if (*p1++ != *p2++)
-	// 	return (*--p1 - *--p2);
 }

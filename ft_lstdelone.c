@@ -6,7 +6,7 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 10:35:03 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/28 14:18:47 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/04/28 15:03:08 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (!lst)
+	if (!lst || !del)
 		return ;
 	(*del)(lst->content);
 	free(lst);
