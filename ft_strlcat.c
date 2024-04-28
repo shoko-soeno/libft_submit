@@ -6,7 +6,7 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 00:28:49 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/27 15:05:32 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/04/28 11:53:31 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	return (dst_len + strlen(src));
 }
 
-// ASSERT_EQ_I(ft_strlcat(NULL, src1, 0), strlcat(NULL, src2, 0));
 // int main() {
 // 	char dst[10] = "Hello";
 // 	const char *src = " World!";
