@@ -6,7 +6,7 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 14:13:14 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/25 16:26:55 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/04/28 13:26:36 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,9 @@ char	*ft_strrchr(const char *s, int c)
 	return (NULL);
 }
 
+// #include <stdio.h>
 // int main(){
 // 	char *s = "qwert";
-// 	char *result = ft_strrchr(s, 116);
+// 	char *result = ft_strrchr(s, -1);
 // 	printf("%s", result);
 // }

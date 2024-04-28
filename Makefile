@@ -6,7 +6,7 @@
 #    By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/28 00:30:25 by ssoeno            #+#    #+#              #
-#    Updated: 2024/04/27 03:55:59 by ssoeno           ###   ########.fr        #
+#    Updated: 2024/04/28 14:37:16 by ssoeno           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,6 @@ ${NAME}: ${OBJS} ${HDRS}
 all: ${NAME}
 
 bonus:${OBJS} ${BONUS_OBJS} ${HDRS}
-	touch bonus
 	${AR} rcs ${NAME} ${OBJS} ${BONUS_OBJS}
 
 clean:

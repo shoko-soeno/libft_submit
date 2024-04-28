@@ -6,7 +6,7 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 13:03:08 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/27 15:06:12 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/04/28 14:09:11 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,10 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return ((char *)s);
 }
-//intにマイナス1を入れても大丈夫か？
+
+// #include <stdio.h>
+// int main()
+// {
+// 	char *result = ft_strchr("asdf", -1);
+// 	printf("%s", result);
+// }

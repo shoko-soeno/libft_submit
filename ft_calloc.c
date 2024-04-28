@@ -6,7 +6,7 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 22:03:08 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/25 21:46:59 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/04/28 13:25:19 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		return (NULL);
 	array = (void *)malloc(nmemb * size);
 	if (array == NULL)
-	{
 		return (NULL);
-	}
 	ft_bzero(array, (nmemb * size));
 	return (array);
 }
