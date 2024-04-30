@@ -6,7 +6,7 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 00:28:49 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/28 11:53:31 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/04/30 21:38:58 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	if (dst)
 		dst_len = ft_strlen(dst);
 	if (dstsize <= dst_len || dstsize == 0)
-		return (dstsize + strlen(src));
+		return (dstsize + ft_strlen(src));
 	i = 0;
 	while (src[i] != '\0' && dst_len + i < dstsize - 1)
 	{
@@ -31,7 +31,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	}
 	if (dst_len < dstsize)
 		dst[dst_len + i] = '\0';
-	return (dst_len + strlen(src));
+	return (dst_len + ft_strlen(src));
 }
 
 // int main() {
