@@ -6,7 +6,7 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 21:57:58 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/22 16:57:30 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/04/30 22:27:38 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static char	*ft_char(char *s, unsigned int number, long int len)
 {
 	while (number > 0)
 	{
-		s[len--] = 48 + (number % 10);
+		s[len--] = '0' + (number % 10);
 		number = number / 10;
 	}
 	return (s);
