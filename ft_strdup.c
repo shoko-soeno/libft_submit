@@ -6,12 +6,11 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 19:56:16 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/23 20:53:17 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/04/30 23:02:16 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdlib.h>
 
 char	*ft_strdup(const char *src)
 {
