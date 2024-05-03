@@ -6,7 +6,7 @@
 /*   By: ssoeno <ssoeno@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 19:57:12 by ssoeno            #+#    #+#             */
-/*   Updated: 2024/04/25 15:17:26 by ssoeno           ###   ########.fr       */
+/*   Updated: 2024/05/03 15:05:12 by ssoeno           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	size_t	i;
 
 	i = 0;
-	if (!dest & !src)
+	if (!dest && !src)
 		return (dest);
 	if (dest != src)
 	{
