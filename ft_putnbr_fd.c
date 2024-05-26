@@ -22,13 +22,13 @@ void	ft_putnbr_fd(int n, int fd)
 		write(fd, "-", 1);
 		nb *= -1;
 	}
-	if (nb > 9)
+	if ( nb < 10 )
 	{
+		ft_putchar_fd(nb + '0', fd);
+	} else {
 		ft_putnbr_fd(nb / 10, fd);
 		ft_putchar_fd((nb % 10) + '0', fd);
-	}
-	else
-		ft_putchar_fd(nb + '0', fd);
+	}		
 }
 
 // void	ft_putchar_fd(char c, int fd)
