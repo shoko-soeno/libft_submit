@@ -42,7 +42,6 @@ char	*ft_itoa(int n)
 	char				*s;
 	long int			int_len;
 	unsigned int		number;
-	int					sign;
 
 	sign = 1;
 	int_len = ft_int_len(n);
@@ -54,7 +53,6 @@ char	*ft_itoa(int n)
 		s[0] = '0';
 	if (n < 0)
 	{
-		sign = -1;
 		number = n * -1;
 		s[0] = '-';
 	}
