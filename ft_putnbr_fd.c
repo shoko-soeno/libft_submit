@@ -26,8 +26,8 @@ void	ft_putnbr_fd(int n, int fd)
 	{
 		ft_putchar_fd(nb + '0', fd);
 	} else {
-		ft_putnbr_fd(nb / 10, fd);
-		ft_putchar_fd((nb % 10) + '0', fd);
+		ft_putnbr_fd(nb / 10, fd); //上位の桁を再帰的に処理
+		ft_putchar_fd((nb % 10) + '0', fd); //現在の文字を出力
 	}		
 }
 
